@@ -1,0 +1,48 @@
+____________________1_______________________
+
+SELECT DISTINCT s.Name 
+
+FROM Salesperson AS s, Customer AS c
+
+WHERE EXISTS 
+
+(SELECT * FROM Orders AS o 
+WHERE s.ID = o.salesperson_id AND c.id = o.cust_id)
+
+AND c.Name = 'Seamens';
+
+
+
+____________________2_______________________
+
+
+SELECT DISTINCT s.Name 
+
+FROM Salesperson AS s, 
+Customer AS o 
+WHERE not EXISTS 
+
+(SELECT * FROM Orders AS o 
+WHERE s.ID = o.salesperson_id AND c.id = o.cust_id)
+
+AND c.Name = 'Seamens';
+
+____________________3_______________________
+
+SELECT s.Name 
+
+FROM salesperson AS s
+
+INNER JOIN 
+
+(SELECT * FROM Orders AS o
+GROUP BY salesperson_id
+HAVING COUNT(*) >= 2) o ON (o.salesperson_id = s.ID);
+
+____________________4_______________________
+
+SELECT name, age 
+
+FROM salesperson
+
+WHERE salary >= 100000;

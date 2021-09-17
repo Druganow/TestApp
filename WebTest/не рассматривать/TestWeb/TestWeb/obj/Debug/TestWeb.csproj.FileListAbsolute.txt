@@ -1,0 +1,7 @@
+C:\Users\Администратор\Desktop\Web\TestWeb\TestWeb\bin\TestWeb.dll.config
+C:\Users\Администратор\Desktop\Web\TestWeb\TestWeb\bin\TestWeb.dll
+C:\Users\Администратор\Desktop\Web\TestWeb\TestWeb\bin\TestWeb.pdb
+C:\Users\Администратор\Desktop\Web\TestWeb\TestWeb\obj\Debug\TestWeb.csprojResolveAssemblyReference.cache
+C:\Users\Администратор\Desktop\Web\TestWeb\TestWeb\obj\Debug\TestWeb.csproj.CoreCompileInputs.cache
+C:\Users\Администратор\Desktop\Web\TestWeb\TestWeb\obj\Debug\TestWeb.dll
+C:\Users\Администратор\Desktop\Web\TestWeb\TestWeb\obj\Debug\TestWeb.pdb

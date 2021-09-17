@@ -1,0 +1,46 @@
+-- create a table
+CREATE TABLE Salesperson (
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  age INTEGER,
+  salary INT(10)
+);
+-- insert some values
+INSERT INTO Salesperson VALUES (1, 'Tom', 61, 140000);
+INSERT INTO Salesperson VALUES (2, 'Michael', 34, 44000);
+INSERT INTO Salesperson VALUES (5,	'Chris', 34, 40000);	
+INSERT INTO Salesperson VALUES (7, 'Dan', 41, 52000);	
+INSERT INTO Salesperson VALUES (8, 'Ken', 57, 115000);	
+INSERT INTO Salesperson VALUES (11, 'Joe', 38, 38000);
+
+CREATE TABLE Customer (
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  sity TEXT,
+  industry_type char(1)
+);
+-- insert some values
+INSERT INTO Customer VALUES (4, 'IVM', 'New York', 'J');
+INSERT INTO Customer VALUES (6, 'Panosong', 'Florida', 'J');
+INSERT INTO Customer VALUES (7, 'Seamens', 'Chicago', 'B');
+INSERT INTO Customer VALUES (9, 'Nowkia', 'Houston', 'B');
+
+CREATE TABLE Orders (				
+  Number INTEGER,
+  order_date DATE,
+  cust_id INTEGER,
+  salesperson_id INTEGER,
+  amount INTEGER,
+  FOREIGN KEY (cust_id)  REFERENCES Customer (id)
+); 
+-- insert some values
+INSERT INTO Orders VALUES (10, 8/2/96, 4, 2, 540);
+INSERT INTO Orders VALUES (20, 1/30/99, 4, 8, 1800);
+INSERT INTO Orders VALUES (30, 7/14/95, 9, 1, 460);
+INSERT INTO Orders VALUES (40, 1/29/98, 7, 2, 2400);
+INSERT INTO Orders VALUES (50, 2/3/98, 6, 7, 600);
+INSERT INTO Orders VALUES (60, 3/2/98, 6, 7, 720);
+INSERT INTO Orders VALUES (70, 5/6/98, 9, 7, 150);
+
+
+
